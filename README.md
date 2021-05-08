@@ -6,7 +6,7 @@
 
 ## INSTALLATION 
 
-## VIDEO [VIDEO TUTORIAL](https://www.youtube.com/watch?v=iNbKTB5534k)
+## VIDEO [YOUTUBE](https://www.youtube.com/watch?v=iNbKTB5534k)
 
 
 ##  MADE WITH LOVE
