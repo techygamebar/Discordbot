@@ -70,7 +70,7 @@ exports.start = function(SETUP) {
 
   const URL_PLAYERS = new URL('/players.json',SETUP.URL_SERVER).toString();
   const URL_INFO = new URL('/info.json',SETUP.URL_SERVER).toString();
-  const MAX_PLAYERS = 32;
+  const MAX_PLAYERS = 22;
   const TICK_MAX = 1 << 9; // max bits for TICK_N
   const FETCH_TIMEOUT = 900;
   const FETCH_OPS = {
@@ -158,13 +158,15 @@ exports.start = function(SETUP) {
   const UpdateEmbed = function() {
     let dot = TICK_N % 2 === 0 ? 'Roofstad' : 'Roleplay';
     let embed = new Discord.RichEmbed()
-    .setAuthor("PARAMOUNT ROLEPLAY STATUS BOT", "https://cdn.discordapp.com/attachments/754200637809492129/769981497435226112/pr_111.png")
+    .setAuthor("HELL Framework - Restarts every 24 hours - Live server status:", "https://cdn.discordapp.com/attachments/744269145062899836/823919636961296384/Glitch_Logo_againn.png")
     .setColor(0x2894C2)
-    .setFooter(TICK_N % 2 === 0 ? '⚪ PRP' : '⚫ PRP')
+    //.setFooter(TICK_N % 2 === 0 ? '⚪ HELL' : '⚫ HELL')
+   //.setFooter(TICK_N % 2 === 0 ? '🟢' : '🟩')
+    
     .setTimestamp(new Date())
     if (STATUS !== undefined)
     {
-      embed.addField(':warning: Actuele server status:',`${STATUS}\n\u200b\n`);
+      embed.addField(':warning: Actual server status:',`${STATUS}\n\u200b\n`);
       embed.setColor(0xff5d00)
     }
     return embed;
@@ -175,9 +177,9 @@ exports.start = function(SETUP) {
     if (LAST_COUNT !== null) log(LOG_LEVELS.INFO,`Server offline ${URL_SERVER} (${URL_PLAYERS} ${URL_INFO})`);
     let embed = UpdateEmbed()
     .setColor(0xff0000)
-    .addField('Server Status',':x: Offline',true)
-    .addField('Queue','?',true)
-    .addField('Players','?\n\u200b\n',true);
+    .addField(':red_circle: Glitch Aim Deathmatch `connect glitchaim.ddns.net` ','**:red_circle:  Glitch Aim Test Server `connect glitchtest.ddns.net`**',true)
+    //.addField('Queue','?',true)
+    //.addField('Players','?\n\u200b\n',true);
     sendOrUpdate(embed);
     LAST_COUNT = null;
   };
@@ -188,10 +190,14 @@ exports.start = function(SETUP) {
         if (players.length !== LAST_COUNT) log(LOG_LEVELS.INFO,`${players.length} players`);
         let queue = vars['Queue'];
         let embed = UpdateEmbed()
-		.addField('Server IP','**`connect paramountrp.ddns.net`**',false)
-        .addField('Server Status',':white_check_mark: Online',true)
+		.addField(':white_check_mark: Glitch Aim Deathmatch `connect glitchaim.ddns.net`','**:red_circle:  Glitch Aim Test Server `connect glitchtest.ddns.net`**' ,false)
+
+        //.addField('Server Status',':white_check_mark: Online',true)
         .addField('Queue',queue === 'Enabled' || queue === undefined ? '0' : queue.split(':')[1].trim(),true)
         .addField('Players',`${players.length}/${MAX_PLAYERS}\n\u200b\n`,true);
+
+        
+
         // .addField('\u200b','\u200b\n\u200b\n',true);
         if (players.length > 0) {
           // method D
@@ -244,7 +250,9 @@ exports.start = function(SETUP) {
   bot.on('ready',() => {
     log(LOG_LEVELS.INFO,'Started...');
     // bot.user.setGame('Roofstad', 'https://www.fivem.net');
-    bot.user.setActivity('PRP',{'url':'https://www.fivem.net','type':'STREAMING'});
+    bot.user.setActivity('PLAYERS',{'url':'https://www.fivem.net','type':'watching'});
+  //  bot.user.setGame("");
+   // bot.user.setActivity("OVERWATCHING PLAYERS");
     bot.generateInvite(['ADMINISTRATOR']).then((link) => {
       log(LOG_LEVELS.INFO,`Invite URL - ${link}`);
     }).catch(null);
