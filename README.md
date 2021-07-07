@@ -14,3 +14,10 @@
 
 ## DISCORD 
 `LEGEND|TGB#1058`
+
+##  To Enable Player names 
+In bot.js uncomment 
+https://media.discordapp.net/attachments/840427635825049620/862188607024791562/bot.PNG
+
+SCREENSHOT
+https://media.discordapp.net/attachments/840427635825049620/862188814122614784/testbot.PNG
