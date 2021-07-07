@@ -17,7 +17,8 @@
 
 ##  To Enable Player names 
 In bot.js uncomment 
-<img align="left" alt="BOT.PNG" width="22px" src="https://media.discordapp.net/attachments/840427635825049620/862188607024791562/bot.PNG" />
+<img align="left" alt="BOT.PNG" width="1080px" src="https://media.discordapp.net/attachments/840427635825049620/862188607024791562/bot.PNG" />
 
 SCREENSHOT
-https://media.discordapp.net/attachments/840427635825049620/862188814122614784/testbot.PNG
+
+<img align="left" alt="ss.PNG" width="1080px" src="https://media.discordapp.net/attachments/840427635825049620/862188814122614784/testbot.PNG" />
