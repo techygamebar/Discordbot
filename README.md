@@ -22,3 +22,7 @@ In bot.js uncomment
 SCREENSHOT
 
 <img align="left" alt="ss.PNG" width="720px" src="https://media.discordapp.net/attachments/840427635825049620/862188814122614784/testbot.PNG" />
+
+
+## SHOW FIVEM SERVER STATUS ON DISCORD
+MADE IN JS
